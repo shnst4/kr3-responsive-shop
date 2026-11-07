@@ -9,8 +9,10 @@
     />
     <title>Converse Chuck 70 — Converse Shop</title>
     <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header>
       <div class="site-header">
         <a class="site-header__logo" href="index.html">Converse Shop</a>
@@ -28,16 +30,14 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="section">
         <div class="product-detail">
-          <!-- Фото товара с бейджем -->
           <div class="product-detail__image">
             <span class="product-detail__badge">Хит</span>
             <img src="img/item_1_no_bg.png" alt="Converse Chuck 70" />
           </div>
 
-          <!-- Информация о товаре -->
           <div class="product-detail__info">
             <h1>Converse Chuck 70</h1>
             <p class="product-detail__description">
@@ -63,37 +63,37 @@
           </caption>
           <thead>
             <tr>
-              <th>Параметр</th>
-              <th>Значение</th>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Бренд</td>
+              <th scope="row">Бренд</th>
               <td>Converse</td>
             </tr>
             <tr>
-              <td>Модель</td>
+              <th scope="row">Модель</th>
               <td>Chuck 70 High Top</td>
             </tr>
             <tr>
-              <td>Цвет</td>
+              <th scope="row">Цвет</th>
               <td>Синий</td>
             </tr>
             <tr>
-              <td>Материал верха</td>
+              <th scope="row">Материал верха</th>
               <td>Текстиль</td>
             </tr>
             <tr>
-              <td>Подошва</td>
+              <th scope="row">Подошва</th>
               <td>Резина</td>
             </tr>
             <tr>
-              <td>Размеры</td>
+              <th scope="row">Размеры</th>
               <td>35–46</td>
             </tr>
             <tr>
-              <td>Наличие</td>
+              <th scope="row">Наличие</th>
               <td>В наличии</td>
             </tr>
           </tbody>

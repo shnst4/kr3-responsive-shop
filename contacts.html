@@ -9,8 +9,10 @@
     />
     <title>Контакты — Converse Shop</title>
     <link rel="stylesheet" href="css/contacts.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header>
       <div class="site-header">
         <a class="site-header__logo" href="index.html">Converse Shop</a>
@@ -28,7 +30,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="section section--card">
         <h1>Контакты</h1>
         <p>
@@ -37,8 +39,11 @@
         </p>
 
         <ul>
-          <li>Телефон: +7 (999) 123-45-67</li>
-          <li>E-mail: info@converse-shop.ru</li>
+          <li>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li>
+            E-mail:
+            <a href="mailto:info@converse-shop.ru">info@converse-shop.ru</a>
+          </li>
           <li>Адрес: г. Москва, ул. Ленина, д. 1</li>
         </ul>
       </section>
