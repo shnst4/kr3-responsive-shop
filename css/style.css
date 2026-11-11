@@ -418,3 +418,7 @@ legend {
 #main-content {
   scroll-margin-top: 16px;
 }
+
+.advantages-picture {
+  border-radius: 20px;
+}
