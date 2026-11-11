@@ -421,4 +421,15 @@ legend {
 
 .advantages-picture {
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.advantages-picture picture {
+  display: block;
+}
+
+.advantages-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
