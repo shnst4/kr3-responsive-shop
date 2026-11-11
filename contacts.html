@@ -8,20 +8,21 @@
       content="Контактная информация магазина Converse Shop."
     />
     <title>Контакты — Converse Shop</title>
-    <link rel="stylesheet" href="css/contacts.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <!-- Первая ссылка доступна с клавиатуры: Tab, затем Enter. -->
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
-    <header>
-      <div class="site-header">
-        <a class="site-header__logo" href="index.html">Converse Shop</a>
 
-        <nav class="site-nav" aria-label="Основная навигация">
-          <ul class="site-nav__list">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Converse Shop</a>
+        <nav aria-label="Основная навигация">
+          <ul class="nav-list">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="contacts.html" aria-current="page">Контакты</a></li>
             <li><a href="index.html#advantages">Преимущества</a></li>
             <li><a href="index.html#popular">Популярные товары</a></li>
             <li><a href="order.html">Оформить заявку</a></li>
@@ -30,37 +31,31 @@
       </div>
     </header>
 
-    <main id="main-content" tabindex="-1">
-      <section class="section section--card">
-        <h1>Контакты</h1>
-        <p>
-          Свяжитесь с нами удобным способом — мы отвечаем в течение рабочего
-          дня.
-        </p>
-
-        <ul>
+    <main id="main-content" class="container" tabindex="-1">
+      <section class="section panel" aria-labelledby="contacts-title">
+        <h1 id="contacts-title">Контакты</h1>
+        <p>Свяжитесь с магазином удобным способом.</p>
+        <ul class="contacts-list">
           <li>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
           <li>
-            E-mail:
+            Электронная почта:
             <a href="mailto:info@converse-shop.ru">info@converse-shop.ru</a>
           </li>
-          <li>Адрес: г. Москва, ул. Ленина, д. 1</li>
+          <li>Адрес: Москва, ул. Ленина, д. 1</li>
         </ul>
       </section>
-
-      <section class="section section--card">
-        <h2>Оформление заказа</h2>
-        <p>
-          Готовы сделать заказ? Оставьте свои контакты и выберите модель — мы
-          обработаем вашу заявку.
-        </p>
-        <a class="button" href="order.html">Оформить заявку</a>
+      <section class="section panel" aria-labelledby="order-links-title">
+        <h2 id="order-links-title">Оформление заказа</h2>
+        <p>Выбери модель и открой демонстрационную форму заявки.</p>
+        <a class="button" href="order.html">Перейти к заявке</a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Converse Shop. Все права защищены.</p>
-      <p>Оригинальная обувь Converse с доставкой по России</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Converse Shop. Учебный проект.</p>
+        <p>Оригинальные модели Converse · Демонстрационный интернет-магазин</p>
+      </div>
     </footer>
   </body>
 </html>

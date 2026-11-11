@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Карточка товара Converse Chuck 70 — характеристики, цена, заказ."
+      content="Описание, цена и характеристики модели Converse Chuck 70."
     />
     <title>Converse Chuck 70 — Converse Shop</title>
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <!-- Первая ссылка доступна с клавиатуры: Tab, затем Enter. -->
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
-    <header>
-      <div class="site-header">
-        <a class="site-header__logo" href="index.html">Converse Shop</a>
 
-        <nav class="site-nav" aria-label="Основная навигация">
-          <ul class="site-nav__list">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Converse Shop</a>
+        <nav aria-label="Основная навигация">
+          <ul class="nav-list">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -30,80 +31,85 @@
       </div>
     </header>
 
-    <main id="main-content" tabindex="-1">
-      <section class="section">
-        <div class="product-detail">
-          <div class="product-detail__image">
-            <span class="product-detail__badge">Хит</span>
-            <img src="img/item_1_no_bg.png" alt="Converse Chuck 70" />
-          </div>
-
-          <div class="product-detail__info">
-            <h1>Converse Chuck 70</h1>
-            <p class="product-detail__description">
-              Классические высокие кеды в синем цвете. Оригинальная модель Chuck
-              70 — обновлённая версия легендарных Chuck Taylor 1970-х годов.
-              Плотный текстиль, усиленная подошва и мягкая стелька.
-            </p>
-
-            <p class="product-detail__price">8 990 руб.</p>
-
-            <a class="button" href="order.html">Заказать</a>
-          </div>
+    <main id="main-content" class="container" tabindex="-1">
+      <section class="section product-detail" aria-labelledby="product-title">
+        <div class="panel product-image">
+          <span class="tag">Популярная модель</span>
+          <img
+            src="images/item_1_no_bg.png"
+            alt="Высокие синие кеды Converse Chuck 70"
+          />
+        </div>
+        <div class="product-info">
+          <h1 id="product-title">Converse Chuck 70</h1>
+          <p>
+            Классические высокие кеды в синем цвете. Плотный текстиль, усиленная
+            подошва и мягкая стелька.
+          </p>
+          <p class="price large">8 990 руб.</p>
+          <a class="button" href="order.html">Оформить заявку</a>
         </div>
       </section>
 
-      <!-- Таблица характеристик -->
-      <section class="section">
-        <h2>Характеристики</h2>
-
-        <table class="product-table">
-          <caption>
-            Технические характеристики Converse Chuck 70
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Параметр</th>
-              <th scope="col">Значение</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Бренд</th>
-              <td>Converse</td>
-            </tr>
-            <tr>
-              <th scope="row">Модель</th>
-              <td>Chuck 70 High Top</td>
-            </tr>
-            <tr>
-              <th scope="row">Цвет</th>
-              <td>Синий</td>
-            </tr>
-            <tr>
-              <th scope="row">Материал верха</th>
-              <td>Текстиль</td>
-            </tr>
-            <tr>
-              <th scope="row">Подошва</th>
-              <td>Резина</td>
-            </tr>
-            <tr>
-              <th scope="row">Размеры</th>
-              <td>35–46</td>
-            </tr>
-            <tr>
-              <th scope="row">Наличие</th>
-              <td>В наличии</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="section" aria-labelledby="specs-title">
+        <h2 id="specs-title">Характеристики</h2>
+        <!-- Таблица остаётся настоящей таблицей; прокручивается только контейнер. -->
+        <div
+          class="table-scroll"
+          role="region"
+          aria-label="Таблица характеристик с горизонтальной прокруткой"
+          tabindex="0"
+        >
+          <table class="product-table">
+            <caption>
+              Технические характеристики Converse Chuck 70
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Бренд</th>
+                <td>Converse</td>
+              </tr>
+              <tr>
+                <th scope="row">Модель</th>
+                <td>Chuck 70 High Top</td>
+              </tr>
+              <tr>
+                <th scope="row">Цвет</th>
+                <td>Синий</td>
+              </tr>
+              <tr>
+                <th scope="row">Материал верха</th>
+                <td>Текстиль</td>
+              </tr>
+              <tr>
+                <th scope="row">Подошва</th>
+                <td>Резина</td>
+              </tr>
+              <tr>
+                <th scope="row">Размеры</th>
+                <td>35–46</td>
+              </tr>
+              <tr>
+                <th scope="row">Наличие</th>
+                <td>В наличии</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Converse Shop. Все права защищены.</p>
-      <p>Оригинальная обувь Converse с доставкой по России</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Converse Shop. Учебный проект.</p>
+        <p>Оригинальные модели Converse · Демонстрационный интернет-магазин</p>
+      </div>
     </footer>
   </body>
 </html>

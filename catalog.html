@@ -3,21 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Каталог кроссовок Converse Shop." />
+    <meta
+      name="description"
+      content="Каталог обуви Converse Shop и параметры выбора."
+    />
     <title>Каталог — Converse Shop</title>
-    <link rel="stylesheet" href="css/catalog.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <!-- Первая ссылка доступна с клавиатуры: Tab, затем Enter. -->
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
-    <header>
-      <div class="site-header">
-        <a class="site-header__logo" href="index.html">Converse Shop</a>
 
-        <nav class="site-nav" aria-label="Основная навигация">
-          <ul class="site-nav__list">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Converse Shop</a>
+        <nav aria-label="Основная навигация">
+          <ul class="nav-list">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="catalog.html" aria-current="page">Каталог</a></li>
             <li><a href="contacts.html">Контакты</a></li>
             <li><a href="index.html#advantages">Преимущества</a></li>
             <li><a href="index.html#popular">Популярные товары</a></li>
@@ -27,111 +31,72 @@
       </div>
     </header>
 
-    <main id="main-content" tabindex="-1">
-      <h1 class="visually-hidden">Каталог Converse Shop</h1>
-      <section class="catalog-layout">
-        <aside class="catalog-filters">
-          <h2>Фильтры</h2>
-
-          <form class="filters-form" action="#" method="get">
-            <fieldset>
-              <legend>Категория</legend>
-
-              <label>
-                <input type="checkbox" name="category" value="all" />
-                Все товары
-              </label>
-
-              <label>
-                <input type="checkbox" name="category" value="popular" />
-                Популярные
-              </label>
-
-              <label>
-                <input type="checkbox" name="category" value="new" />
-                Новинки
-              </label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Цена</legend>
-
-              <label for="price-from">От</label>
-              <input
-                id="price-from"
-                name="price-from"
-                type="number"
-                min="0"
-                placeholder="0"
-              />
-
-              <label for="price-to">До</label>
-              <input
-                id="price-to"
-                name="price-to"
-                type="number"
-                min="0"
-                placeholder="50 000"
-              />
-            </fieldset>
-
-            <button class="button" type="submit">Применить</button>
-          </form>
+    <main id="main-content" class="container" tabindex="-1">
+      <h1 class="page-heading">Каталог Converse</h1>
+      <div class="catalog-layout">
+        <aside class="panel catalog-filters" aria-labelledby="filter-title">
+          <h2 id="filter-title">Параметры выбора</h2>
+          <p class="muted">
+            Демонстрационный блок фильтров — без обработки на сервере.
+          </p>
+          <fieldset>
+            <legend>Категория</legend>
+            <label class="choice"
+              ><input type="checkbox" /> Популярные модели</label
+            >
+            <label class="choice"><input type="checkbox" /> Новинки</label>
+          </fieldset>
+          <fieldset>
+            <legend>Ценовой диапазон</legend>
+            <p>От 7 000 до 13 000 руб.</p>
+          </fieldset>
         </aside>
-
-        <section class="catalog-products">
-          <h2>Список товаров</h2>
-
-          <div class="products-grid">
+        <section aria-labelledby="goods-title">
+          <h2 id="goods-title">Список товаров</h2>
+          <div class="products-grid catalog-grid">
             <article class="product-card">
-              <div class="product-card__image">
-                <img src="img/item_1_no_bg.png" alt="Converse Chuck 70" />
-              </div>
-              <h3 class="product-card__title">Converse Chuck 70</h3>
-              <p class="product-card__description">
-                Классические высокие кеды в синем цвете.
-              </p>
-              <p class="product-card__price">Цена: 8 990 руб.</p>
-              <a class="button product-card__button" href="product.html"
-                >Подробнее</a
-              >
+              <img
+                src="images/item_1_no_bg.png"
+                alt="Кеды Converse Chuck 70"
+                loading="lazy"
+              />
+              <h3>Converse Chuck 70</h3>
+              <p>Классические высокие кеды в синем цвете.</p>
+              <p class="price">8 990 руб.</p>
+              <a class="button" href="product.html">Подробнее о модели</a>
             </article>
-
             <article class="product-card">
-              <div class="product-card__image">
-                <img src="img/item_2_no_bg.png" alt="Converse All Star Low" />
-              </div>
-              <h3 class="product-card__title">Converse All Star Low</h3>
-              <p class="product-card__description">
-                Низкие кеды, универсальная модель на каждый день.
-              </p>
-              <p class="product-card__price">Цена: 7 490 руб.</p>
-              <a class="button product-card__button" href="product.html"
-                >Подробнее</a
-              >
+              <img
+                src="images/item_2_no_bg.png"
+                alt="Кеды Converse All Star Low"
+                loading="lazy"
+              />
+              <h3>Converse All Star Low</h3>
+              <p>Универсальная модель на каждый день.</p>
+              <p class="price">7 490 руб.</p>
+              <a class="button" href="order.html">Оформить заявку</a>
             </article>
-
             <article class="product-card">
-              <div class="product-card__image">
-                <img src="img/item_3_no_bg.png" alt="Converse Run Star Hike" />
-              </div>
-              <h3 class="product-card__title">Converse Run Star Hike</h3>
-              <p class="product-card__description">
-                Массивная подошва, современный дизайн.
-              </p>
-              <p class="product-card__price">Цена: 12 990 руб.</p>
-              <a class="button product-card__button" href="product.html"
-                >Подробнее</a
-              >
+              <img
+                src="images/item_3_no_bg.png"
+                alt="Кеды Converse Run Star Hike"
+                loading="lazy"
+              />
+              <h3>Converse Run Star Hike</h3>
+              <p>Выразительная подошва и современный дизайн.</p>
+              <p class="price">12 990 руб.</p>
+              <a class="button" href="order.html">Оформить заявку</a>
             </article>
           </div>
         </section>
-      </section>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Converse Shop. Все права защищены.</p>
-      <p>Оригинальная обувь Converse с доставкой по России</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Converse Shop. Учебный проект.</p>
+        <p>Оригинальные модели Converse · Демонстрационный интернет-магазин</p>
+      </div>
     </footer>
   </body>
 </html>
